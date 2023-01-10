@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 100%; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    /* overflow:hidden */
+}
+
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.form-group {
+    margin-bottom: .75rem;
+
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+form {
+    width: 860px;
+    height: 55px;
+    display: flex;
+
+}
+
+/* form input{
+    border: none;
+ */
+/* } */
+
+#inputValue {
+    flex: 1;
+    width: 660px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    min-height: 4S0px;
+
+    outline: none;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #1b3753;
+    line-height: 1.66;
+    padding: 5px 5px;
+
+    /* border-radius: 5%; */
+}
+
+form .fa-search {
+    align-self: center;
+    color: #777;
+    padding: 10px 20px;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: tomato;
+    opacity: 0.5;
+    /* Firefox */
+}
+
+#search {
+    color: #fff;
+    background-color: tomato;
+    font-size: 1rem;
+    outline-color: none;
+    min-height: 40px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    padding: 2.5px 2.5px;
+    border: none;
+    /* line-height: 1.5; */
+    /* border-radius: 5%; */
+
+}
+
+#searched-movies {
+    margin-top: 15px;
+}
+
+section {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: auto;
+    transition: 250ms all;
+    margin: 50px 50px 50px 50px;
+    padding: 10px;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+.loadinContent{
+    width: 100%;
+    height:50px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="black" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="30" text-anchor="middle">Loadin...videos..</text></svg>') 0px 0px no-repeat;
+    transform: scale(1.05);
+    border: 1.5px solid rgb(196, 192, 192);
+
+    /* margin-bottom: 10px; */
+    /* -webkit-transition: width 0.3s,box-shadow 0.2s;
+    transition: width 0.3s,box-shadow 0.2s; */
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+
+}
+
+.content,
+.loadinContent {
+    position: relative;
+    border: 0.5px solid rgb(196, 192, 192);
+    /* height: 300px; */
+    display: none;
+}
+
+.content-display,
+.loadinContent-display {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+.content div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+}
+
+p:hover {
+    cursor: pointer;
+    border: 1px solid red;
+
+}
+
+.fa-close {
+    background-color: tomato;
+}
+
+.movie-card {
+    display: block;
+    padding: 1px;
+    margin-left: 20px;
+}
+
+.movie-details {
+    width: 100%;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.7);
+    -webkit-transition: width 0.6s, box-shadow 0.6s;
+    transition: width 0.6s, box-shadow 0.6s;
+
+}
+
+.details__header,
+.details__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-card img {
+    width: 100%;
+    /* border-radius: 4px; */
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: width 0.6s, box-shadow 0.6s;
+    transition: width 0.6s, box-shadow 0.6s;
+}
+
+.movie-card:hover {
+    /* width: 100%; */
+    /* justify-content: space-around; */
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 1.5px solid rgb(196, 192, 192);
+
+    /* margin-bottom: 10px; */
+    /* -webkit-transition: width 0.3s,box-shadow 0.2s;
+    transition: width 0.3s,box-shadow 0.2s; */
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+
+}
+
+
+.stars-outer {
+    position: relative;
+    display: inline-block;
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005 \f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: larger;
+
+    color: #ccc;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005 \f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: larger;
+    color: #f8ce0b;
+}

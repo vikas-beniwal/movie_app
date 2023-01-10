@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 100%; */
+  }
+:root{
+    --large-font-size: 1.5em;
+    --medium-font-size: 1.2em;
+    --small-font-size: 1em;
+    --faded-color: grey;
+    --header-background-color: rgb(43, 39, 39);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    /* height: 100vh; */
+  }
+
+.app_header {
+    background: var(--header-background-color);
+    width: 100%;
+}
+
+
+.menu{
+    display: flex;
+    color: white;
+    height: 75px;
+    width:70%;
+    font-family: var(--primary-font-family);
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    justify-content: space-between;
+    max-width: 1400px;
+}
+
+
+section {
+    display: block;
+}
+
+h1 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.logo__link {
+    color: grey;
+    text-decoration: none;
+    font-size: var(--large-font-size);
+    word-spacing: 0.35em;
+
+}
+
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+ol, ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.menu__list {
+    display: flex;
+
+    padding: 0 20px;
+}
+
+.menu__item {
+    padding: 15px 20px;
+    margin: 0 20px;
+
+    outline: none;
+    font-size: 1.5em;
+    /* -webkit-transition: background 0.3s;
+    transition: background 0.3s; */
+}
+.menu__link{
+    text-decoration: none;
+    color: antiquewhite;
+
+
+}
+
+
+@media screen and (min-width: 768px){
+.menu {
+    justify-content: flex-start;
+}
+
+.menu__item {
+    padding: 15px 50px;
+}
+
+.movie-card img{
+    width: 100%;
+    margin-top: 0;
+}
+.movie-card .movie-details{
+    width: 100%;
+    margin-top: 0;
+}
+
+.movie-card {
+    width: 33%;
+    min-width: 400px;
+    margin-top: 0;
+}
+
+} 
